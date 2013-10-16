@@ -7,7 +7,11 @@ module.exports = function(grunt){
 		if (selenium && selenium.kill) {
 			selenium.kill();
 		}
-	}
+	};
+
+	// NO AUTOMATED TESTS FOR THIS
+	// There is a semi-auto test via `grunt testExit`, but requires user confirmation.
+	process.on('exit', End);
 
 	grunt.registerTask('seleniumLaunch', 'Start a selenium remote.', function(){
 		done = this.async();
@@ -20,6 +24,6 @@ module.exports = function(grunt){
 	});
 
 	grunt.registerTask('seleniumClose', 'Shut down any selenium that was started.', function(){
-			End();
+		End();
 	});
 };
