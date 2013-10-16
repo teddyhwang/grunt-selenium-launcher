@@ -21,3 +21,8 @@ module.exports = (grunt)->
 	grunt.loadTasks './tasks'
 
 	grunt.registerTask 'default', ['seleniumLaunch', 'drive', 'seleniumClose']
+
+	grunt.registerTask 'testExit', 'Launch a selenium server, end the process, and let the user check if it was closed.', ->
+		grunt.log.warn 'Starting a selenium server, then exiting.\nCheck with `ps -a` that no java selenium processes are still running.\n'
+		grunt.task.run ['seleniumLaunch']
+
