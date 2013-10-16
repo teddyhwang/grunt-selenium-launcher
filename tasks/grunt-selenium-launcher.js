@@ -9,7 +9,7 @@ module.exports = function(grunt){
 		}
 	};
 
-	// NO AUTOMATED TESTS FOR THIS
+	// NO FULLY AUTOMATED TESTS FOR THIS
 	// There is a semi-auto test via `grunt testExit`, but requires user confirmation.
 	process.on('exit', End);
 
@@ -21,9 +21,5 @@ module.exports = function(grunt){
 			process.env.SELENIUM_HUB = "http://localhost:" + process.env.SELENIUM_LAUNCHER_PORT + "/wd/hub"
 			done();
 		});
-	});
-
-	grunt.registerTask('seleniumClose', 'Shut down any selenium that was started.', function(){
-		End();
 	});
 };
