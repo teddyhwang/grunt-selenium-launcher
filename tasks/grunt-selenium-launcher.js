@@ -13,7 +13,8 @@ module.exports = function(grunt){
 		done = this.async();
 		seleniumLauncher(function(err, sel){
 			selenium = sel;
-			process.env.SELENIUM_LAUNCHER_PORT = selenium.port;
+			process.env.SELENIUM_LAUNCHER_PORT = selenium.port
+			process.env.SELENIUM_HUB = "http://localhost:" + process.env.SELENIUM_LAUNCHER_PORT + "/wd/hub"
 			done();
 		});
 	});
