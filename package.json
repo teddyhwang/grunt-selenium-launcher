@@ -1,0 +1,30 @@
+{
+  "name": "grunt-selenium-launcher",
+  "version": "0.0.0",
+  "description": "Grunt tasks to manage a selenium instance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/DavidSouther/grunt-selenium-launcher"
+  },
+  "keywords": [
+    "grunt",
+    "selenium",
+    "launcher"
+  ],
+  "author": "David Souther",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidSouther/grunt-selenium-launcher/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "selenium-webdriver": "~2.35.2"
+  },
+  "dependencies": {
+    "selenium-launcher": "~1.1.7"
+  }
+}
