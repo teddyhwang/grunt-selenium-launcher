@@ -1,14 +1,13 @@
 {
   "name": "grunt-selenium-launcher",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Grunt tasks to manage a selenium instance.",
-  "main": "index.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/DavidSouther/grunt-selenium-launcher"
+    "url": "git://github.com/DavidSouther/grunt-selenium-launcher.git"
   },
   "keywords": [
     "grunt",
