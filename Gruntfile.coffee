@@ -4,7 +4,7 @@ module.exports = (grunt)->
 		grunt.log.write 'Driving\n'
 		webdriver = require("selenium-webdriver")
 		driver = new webdriver.Builder()
-			.usingServer("http://localhost:#{process.env.SELENIUM_LAUNCHER_PORT}/wd/hub")
+			.usingServer(process.env.SELENIUM_HUB)
 			.withCapabilities(webdriver.Capabilities.firefox())
 			.build()
 		grunt.log.write 'Have a driver\n'
