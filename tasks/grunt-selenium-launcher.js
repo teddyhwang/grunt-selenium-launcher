@@ -13,7 +13,7 @@ module.exports = function(grunt){
 	// There is a semi-auto test via `grunt testExit`, but requires user confirmation.
 	process.on('exit', End);
 
-	grunt.registerTask('seleniumLaunch', 'Start a selenium remote.', function(){
+	grunt.registerTask('selenium-launch', 'Start a selenium remote.', function(){
 		done = this.async();
 		seleniumLauncher(function(err, sel){
 			selenium = sel;
