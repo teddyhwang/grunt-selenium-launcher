@@ -1,6 +1,6 @@
 {
   "name": "grunt-selenium-launcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Grunt tasks to manage a selenium instance.",
   "scripts": {
     "test": "grunt test"
