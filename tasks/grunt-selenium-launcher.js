@@ -16,10 +16,18 @@ module.exports = function(grunt){
 	grunt.registerTask('selenium-launch', 'Start a selenium remote.', function(){
 		done = this.async();
 		seleniumLauncher(function(err, sel){
-			selenium = sel;
-			process.env.SELENIUM_LAUNCHER_PORT = selenium.port
-			process.env.SELENIUM_HUB = "http://localhost:" + process.env.SELENIUM_LAUNCHER_PORT + "/wd/hub"
-			done();
+			if (err) {
+				// semi-auto test via `grunt testInduceFailure`
+				grunt.log.error('There was a problem launching selenium.');
+				grunt.log.debug(err);
+				done(false);
+			}
+			else {
+				selenium = sel;
+				process.env.SELENIUM_LAUNCHER_PORT = selenium.port
+				process.env.SELENIUM_HUB = "http://localhost:" + process.env.SELENIUM_LAUNCHER_PORT + "/wd/hub"
+				done();
+			}
 		});
 	});
 };
