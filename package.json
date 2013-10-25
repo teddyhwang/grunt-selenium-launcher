@@ -24,6 +24,6 @@
     "selenium-webdriver": "~2.35.2"
   },
   "dependencies": {
-    "selenium-launcher": "~1.1.7"
+    "selenium-launcher": "git://github.com/teddyhwang/nodejs-selenium-launcher.git"
   }
 }
